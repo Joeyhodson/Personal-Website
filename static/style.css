@@ -1,0 +1,65 @@
+body {
+ /*   background:rgb(235, 220, 220);
+    color: rgb(99, 99, 48); */
+    text-align: left;
+    font-family: monospace;
+    font-size: 16px;
+    background:rgb(37, 38, 48);
+    color: rgb(173, 226, 87);
+    
+}
+
+/* .Header {
+    top:30px;
+    right:75px;
+    position: fixed;
+} */
+
+.Header {
+    position:fixed;
+    width:100%;
+    top:0;
+    background:rgb(37, 38, 48);
+    color: rgb(173, 226, 87);
+    /* border: 20px rgb(37, 39, 48); */
+}
+
+.smaller {
+    font-size: 17px;
+}
+
+.cover {
+    color: rgb(37, 38, 48);
+}
+
+/* div.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-color: green;
+    border: 2px solid #4CAF50;
+} */
+
+a:link {
+    color: rgba(185, 252, 77, 0.849);
+    /*background-color: transparent;*/
+    text-decoration: none;
+}
+
+a:visited {
+    color: rgba(185, 252, 77, 0.849);
+    /*background-color: transparent;*/
+    text-decoration: none;
+}
+
+a:hover {
+    color:rgba(185, 252, 77, 0.849);
+    /*background-color: transparent;*/
+    text-decoration: underline;
+}
+
+a:active {
+    color: rgba(185, 252, 77, 0.849);
+    /*background-color: transparent;*/
+    text-decoration: none;
+}
