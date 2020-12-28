@@ -1,34 +1,24 @@
 body {
- /*   background:rgb(235, 220, 220);
-    color: rgb(99, 99, 48); */
     text-align: left;
     font-family: monospace;
     font-size: 16px;
     background:rgb(37, 38, 48);
     color: rgb(173, 226, 87);
-    
 }
 
-/* .Header {
-    top:30px;
-    right:75px;
-    position: fixed;
-} */
-
-.Header {
+.scrollHeader {
     position:fixed;
     width:100%;
     top:0;
     background:rgb(37, 38, 48);
     color: rgb(173, 226, 87);
-    /* border: 20px rgb(37, 39, 48); */
 }
 
 .smaller {
     font-size: 17px;
 }
 
-.greaterfont {
+.companyFont {
     font-size: 18px;
 }
 
@@ -36,17 +26,14 @@ body {
     font-size:27px;
 }
 
-.cover {
+.cloke {
     color: rgb(37, 38, 48);
 }
 
-/* div.sticky {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    background-color: green;
-    border: 2px solid #4CAF50;
-} */
+.lastUpdated {
+    font-style: italic;
+    color: rgb(91, 122, 38);
+}
 
 a:link {
     color: rgba(185, 252, 77, 0.849);
