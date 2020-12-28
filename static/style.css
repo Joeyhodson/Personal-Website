@@ -4,10 +4,25 @@ body {
     font-size: 16px;
     background:rgb(37, 38, 48);
     color: rgb(173, 226, 87);
+    margin-left: 15px;
+    margin-right: 500px;
+    margin-bottom: 25px;
+}
+
+.footer {
+    position: absolute;
+    font-size: 14px;
+    text-align: center;
+    background:rgb(37, 38, 48);
+    color: rgb(173, 226, 87);
+    vertical-align: center;
+    width: 100%;
+    margin:0 auto;
 }
 
 .scrollHeader {
-    position:fixed;
+    position: fixed;
+    -webkit-transform: translateZ(0);
     width:100%;
     top:0;
     background:rgb(37, 38, 48);
@@ -16,6 +31,10 @@ body {
 
 .smaller {
     font-size: 17px;
+}
+
+.smallSpace {
+    font-size: 7px;
 }
 
 .companyFont {
