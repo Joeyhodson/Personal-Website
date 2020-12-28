@@ -28,6 +28,14 @@ body {
     font-size: 17px;
 }
 
+.greaterfont {
+    font-size: 18px;
+}
+
+.topicFont {
+    font-size:27px;
+}
+
 .cover {
     color: rgb(37, 38, 48);
 }
