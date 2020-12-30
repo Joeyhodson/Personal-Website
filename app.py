@@ -10,6 +10,38 @@ def index():
 def resume():
     return render_template('resume.html')
 
+@app.route('/3DPrinting')
+def threedprinting():
+    return render_template('3DPrinting.html')
+
+@app.route('/ElectricSkateboard')
+def electricskateboard():
+    return render_template('ElecSkate.html')
+
+@app.route('/Fishing')
+def fishing():
+    return render_template('Fishing.html')
+
+@app.route('/FishTank')
+def fishtank():
+    return render_template('fishTank.html')
+
+@app.route('/LEDCube')
+def ledcube():
+    return render_template('LEDCube.html')
+
+@app.route('/LEDFootwells')
+def ledfootwells():
+    return render_template('LEDFootwells.html')
+
+@app.route('/Photography')
+def photography():
+    return render_template('Photography.html')
+
+@app.route('/RoboticQuadruped')
+def robot():
+    return render_template('robotQuad.html')
+
 @app.route('/JosephHodsonResume.pdf')
 def path():
     try:
