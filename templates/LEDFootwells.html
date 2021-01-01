@@ -23,7 +23,24 @@
     </div>
 
     <body>
-        
+
+        <br><br><br><br>
+        <h2><b><span class='topicFont'><i class="fas fa-angle-right"></i>&nbsp;LED Car Footwells</span></b></h2>
+        <p>
+           This was a short, not too complex project. As you can already tell, I love my LEDs. I find that it's easy to create new projects that include them, plus, it allows me to constantly stay active with microcontrollers and sharpen my soldering skills.
+           Also, you can't deny that they're fun to look at! The LEDs are located in the footwells of the driver, passenger, and rear seats. 
+           I at first integrated them into the car system to be synchronous with the music playing, thus requiring me to create a circuit. I later preferred the LEDs to constantly be on since it became slightly obnoxious.
+        </p>
+        <h2><span class='topicFont'><i class="fas fa-angle-right"></i>&nbsp;Technical Details</span></h2>
+        <br>
+        <ul>
+            <li>Some of the hardware consisted of an An Arduino Nano (to easily integrate the sound sensor into the system), a resistor, a capacitor, four 2-wire LED strips cut to proper length, and some wire.</li>
+            <li>The RC combination essentially created a lowpass filter, removing some of the higher-frequency noise the sensor picked up from the nearby speaker. The input signal was then fed to an input pin on the Nano in which provided a cleaner output for the LEDs.</li>
+            <li>The power supply to the circuit came directly from the car battery. I therefore, decided to go with 12v LEDs.</li>
+        </ul>
+        <h2><span class='topicFont'><i class="fas fa-angle-right"></i>&nbsp;Visuals</span></h2>
+        <IMG SRC="static/project_photos/spiderFront.jpg">
+
     </body>
 
 </html>
