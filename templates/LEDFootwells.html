@@ -6,12 +6,12 @@
         <link rel="stylesheet" href='/static/style.css' />
         <script src="https://kit.fontawesome.com/fa5d7fcc18.js" crossorigin="anonymous"></script>
         <title>LED Footwells</title>
-        <link rel = "icon" type = "image/png" href = "/static/logo.png">
+        <link rel="icon" type="image/png" href="/static/logo.png">
     </head>
 
     <div class="scrollHeader">
         <h1>
-            <i class="fas fa-angle-double-right"></i><span class='smallSpace'>&nbsp;&nbsp;&nbsp;</span>Joseph Hodson<span class='smallSpace'>&nbsp;</span><IMG SRC="static/cursor.gif">
+            <i class="fas fa-angle-double-right"></i><span class='smallSpace'>&nbsp;&nbsp;&nbsp;</span>Joseph Hodson<span class='smallSpace'>&nbsp;</span><img SRC="/static/cursor.gif">
             <span class='smaller'><span style="float:right;">
             <a href="mailto:Josephahodson@gmail.com"><i class="fas fa-envelope" style="font-size: 1.4em;"></i></a>
             <!-- <a href="www.google.com"><i class="fas fa-mobile "style="font-size: 1.4em;"></i></a> -->
@@ -25,21 +25,29 @@
     <body>
 
         <br><br><br><br>
+
+        <!-- Intro -->
         <h2><b><span class='topicFont'><i class="fas fa-angle-right"></i>&nbsp;LED Car Footwells</span></b></h2>
         <p>
            This was a short, not too complex project. As you can already tell, I love my LEDs. I find that it's easy to create new projects that include them, plus, it allows me to constantly stay active with microcontrollers and sharpen my soldering skills.
            Also, you can't deny that they're fun to look at! The LEDs are located in the footwells of the driver, passenger, and rear seats. 
-           I at first integrated them into the car system to be synchronous with the music playing, thus requiring me to create a circuit. I later preferred the LEDs to constantly be on since it became slightly obnoxious.
+           I at first integrated them into the car system to be synchronous with the music playing, thus requiring me to create a circuit. 
+           I later preferred that the LEDs stay on constantly, and implemented a switch in which can dial back to a constant stream of light.
         </p>
-        <h2><span class='topicFont'><i class="fas fa-angle-right"></i>&nbsp;Technical Details</span></h2>
+
+        <!-- Technical Details -->
         <br>
+        <h2><span class='topicFont'><i class="fas fa-angle-right"></i>&nbsp;Technical Details</span></h2>
         <ul>
             <li>Some of the hardware consisted of an An Arduino Nano (to easily integrate the sound sensor into the system), a resistor, a capacitor, four 2-wire LED strips cut to proper length, and some wire.</li>
             <li>The RC combination essentially created a lowpass filter, removing some of the higher-frequency noise the sensor picked up from the nearby speaker. The input signal was then fed to an input pin on the Nano in which provided a cleaner output for the LEDs.</li>
             <li>The power supply to the circuit came directly from the car battery. I therefore, decided to go with 12v LEDs.</li>
         </ul>
+
+        <!-- Visuals -->
+        <br>
         <h2><span class='topicFont'><i class="fas fa-angle-right"></i>&nbsp;Visuals</span></h2>
-        <IMG SRC="static/project_photos/spiderFront.jpg">
+        <img src="/static/project_photos/spiderFront.jpg" alt="Spider Front" style="width:500px;height:600px;">
 
     </body>
 
