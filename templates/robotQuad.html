@@ -29,24 +29,30 @@
         <!-- Intro -->
         <h2><b><span class='topicFont'><i class="fas fa-angle-right"></i>&nbsp;Robotic Quadruped</span></b></h2>
         <p>
-           This was a short, not too complex project. As you can already tell, I love my LEDs. I find that it's easy to create new projects that include them, plus, it allows me to constantly stay active with microcontrollers and sharpen my soldering skills.
-           Also, you can't deny that they're fun to look at! The LEDs are located in the footwells of the driver, passenger, and rear seats. 
-           I at first integrated them into the car system to be synchronous with the music playing, thus requiring me to create a circuit. I later preferred the LEDs to constantly be on since it became slightly obnoxious.
+           The robotic quadruped, a robotic spider with four legs. I always wanted to create some sort of robot and I had been playing around with servo motors at the time, so when I
+           saw a similar quadruped online, I instantly knew I wanted to make one. I found an online tutorial that brought inspiration, however, I decided to tackle this project with little guidance to gain better 
+           experience. Going about this blindly, I decided to make the robot autonomous and unidirectional for simplicity. I still have a passion for robotics and may consider developing a second spider using
+           a romote controller and stronger servos. My greatest struggle with this project was limiting stress on the servos and trying to decrease the robot's total body weight.
         </p>
 
         <!-- Technical Details -->
         <br>
         <h2><span class='topicFont'><i class="fas fa-angle-right"></i>&nbsp;Technical Details</span></h2>
         <ul>
-            <li>Some of the hardware consisted of an An Arduino Nano (to easily integrate the sound sensor into the system), a resistor, a capacitor, four 2-wire LED strips cut to proper length, and some wire.</li>
-            <li>The RC combination essentially created a lowpass filter, removing some of the higher-frequency noise the sensor picked up from the nearby speaker. The input signal was then fed to an input pin on the Nano in which provided a cleaner output for the LEDs.</li>
-            <li>The power supply to the circuit came directly from the car battery. I therefore, decided to go with 12v LEDs.</li>
+            <li>I used an Arduino Nano as the controller since they are lighter than Unos. The controller was powered by a 9v lithium battery.</li>
+            <li>The robot had four 3-part moving limbs and therefore used 12 SG90 servo motors. I used 12 digital gpio pins and had a common power supply plane and ground plane that fed to
+                each motor. I dealt with a lot of jitter in the motors so I included a few capacitors between the power/ground planes in which helped quite a bit.</li>
+            <li>The limbs were made from paint sticks in which I sanded and spray-painted black (I was on a budget). I cut 4 sticks each into two separate pieces, 4 femurs and 4 coxas.</li>
+            <li>To limit stress on the servos, I switched from 4 alkaline batteries to 4 lithium batteries, weighing roughly 60% of what the original AA batteries did. The AA batteries 
+                were wired in two sets of series connections, the two sets were then wired in parallel, outputting 3V to the servos.</li>
+            <li>The program essentially had a series of for loops within a while loop, each for loop being a servo motor's rotation. Having some new found knowledge in programming, I might implement
+                this a little differently today.</li>
         </ul>
 
         <!-- Visuals -->
         <br>
         <h2><span class='topicFont'><i class="fas fa-angle-right"></i>&nbsp;Visuals</span></h2>
-        <img src="/static/project_photos/lady.jpg" alt="Spider Front" style="width:500px;height:600px;">
+        <img src="/static/project_photos/underneathSkate.jpg" alt="Spider Front" style="width:500px;height:600px;">
 
         <!-- Footer -->
         <br><br><br><br>

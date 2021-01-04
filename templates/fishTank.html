@@ -29,33 +29,41 @@
         <!-- Intro -->
         <h2><b><span class='topicFont'><i class="fas fa-angle-right"></i>&nbsp;Self-Sufficient Fish Tank</span></b></h2>
         <p>
-           This may be one my most treasured projects that I have completed since this was my first ever side-project related to my field. This project wasn't necessarily difficult and may not be extremely intriguing to the naked eye,
-           however, at the time, it was to me. The LED Cube opened a whole new world of electronics to me and really inspired me to continue to work with microcontrollers. I was completely mindblown to the fact that I had created 
-           the flashing cube before me.
+           The inspiration to undertake this project originated because I wanted to get another fish, as I used to have many. My only thing about getting a fish tank was 
+           that they required a little bit of setting up and required multiple utilities (air pumps, filters, lights, etc.). These utilities usually require their own power supplies
+           and therefore more messy cords. My goal was to integrate all of these utilities into one functioning system and rely on a single power supply.
         </p>
 
         <!-- Technical Details -->
         <br>
         <h2><span class='topicFont'><i class="fas fa-angle-right"></i>&nbsp;Technical Details</span></h2>
         <ul>
-            <li>Ran the program from an Arduino Uno. Other hardware consisted of: 4x4x4 (64) blue leds, and 4 resistors for every level of of the cube, where every level was grounded. The bottom 16 pins of the led
-                structure were connected to 16 different gpio pins from the Uno.</li>
-            <li>Since knowing nothing about programming at the time, I tweaked some online source code in which provided a series of lighting effexts.</li>
-            <li>A ton of delicate soldering was required for this project as well, this was a challenge for me as I was just a beginner. I was also using lead-free solder at the time in which
-                subsequently made the process a lot harder.</li>
+            <li>The embedded system is centered around a Topfin air pump, originally powered by two D-batteries. Instead, I gutted the lower portion of the pump's container and placed
+                the system's controller, an Arduino Nano, where the batteries usually would be inserted.</li>
+            <li>The system's power supply is an old laptop charger that outputs 12VDC, 1.5A after being connected to a buck convertor. The output of the DC-DC convertor feeds directly
+                to the Nano.</li>
+            <li>I implemented a homemade filter by using a USB water pump in which runs off 3V-9V DC. I wanted a stronger filter so the water pump's power supply came from a voltage divider from
+                the system's main input voltage, outputting roughly 8.5V.</li>
+            <li>The air pump's motor originally ran off 3VDC (two D-batteries) so I therefore connected the 3.3V pin from the Nano to a resistor and then to the pump.</li>
+            <li>The Nano's main purpose was to control the lighting in which I programmed using color schemes from Palleteknife.</li>
+            <li>I used 20 WS2812B individually-addressable LEDs that I soldered into a rectangular formation (5x4) to easily fit into a square container, fitting nicely on top of the tank.
+                The 3-wire LEDs used both power/ground and a data wire (data pin: 6 in my setup). I soldered the LEDs' power/ground pins in parallel and the data pins I soldered in series as the signal carried
+                from LED to LED. I added a single capacitor before the power/ground terminals to limit any noise to the LEDs.</li>
+            <li>I added two switches, one for the system's total power supply, and one for the LEDs.</li>
+            <li>To allow for better portability and maintenance, all parts of the system can be detached as I used JST connectors between the utilities.</li>
         </ul>
 
         <!-- Visuals -->
         <br>
         <h2><span class='topicFont'><i class="fas fa-angle-right"></i>&nbsp;Visuals</span></h2>
-        <img src="/static/project_photos/lady.jpg" alt="Spider Front" style="width:500px;height:600px;">
+        <img src="/static/project_photos/underneathSkate.jpg" alt="Spider Front" style="width:500px;height:600px;">
 
         <!-- Footer -->
         <br><br><br><br>
         <div class ="footer">
             <span style="float:center;">
                 <a href="/ElectricSkateboard"><i class="fas fa-caret-left"></i> Electric Skateboard</a>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <a href="/">Home <i class="fas fa-home"></i></a>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <a href="/LEDFootwells">LED Footwells <i class="fas fa-caret-right"></i></a></span>
