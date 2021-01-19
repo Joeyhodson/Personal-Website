@@ -1,17 +1,13 @@
-# MODULE_PATH = "/home/pi/.local/lib/python3.7/site-packages/flask_talisman/__init__.py"
-# MODULE_NAME = "flask_talisman"
-# import importlib
-# import sys
-# spec = importlib.util.spec_from_file_location(MODULE_NAME, MODULE_PATH)
-# module = importlib.util.module_from_spec(spec)
-# sys.modules[spec.name] = module
-# spec.loader.exec_module(module)
 
 from flask import Flask, render_template, send_file, redirect, request
-# from flask_talisman import Talisman
+from gevent.pywsgi import WSGIServer
+import logging
+import logging.handlers as handlers
+
+
 
 app = Flask(__name__)
-# Talisman(app)
+
 
 @app.route('/')
 def index():
@@ -61,5 +57,17 @@ def pathToResume():
         return str(e)
 
 if __name__ == '__main__':
+
+    # Development Server
     #app.run(host = '0.0.0.0', port=443, threaded=True, ssl_context=('/etc/letsencrypt/live/joeyhodson.com/fullchain.pem', '/etc/letsencrypt/live/joeyhodson.com/privkey.pem'))
-    app.run(host = '0.0.0.0', port=80, threaded=True)
+    #app.run(host = '0.0.0.0', port=80, threaded=True)
+
+    # Production Server
+    logger = logging.getLogger('MainProgram')
+    logger.setLevel(10)
+    logHandler = handlers.RotatingFileHandler('/personalserver/logs.txt', maxBytes = 1000000, backupCount = 1) #sets log to cap off at 1MB, logs.txt.1 will be created after.
+    logger.addHandler(logHandler)
+    logger.info("Logging configuration done")
+
+    http_server = WSGIServer(('', 80), app, log = logger)
+    http_server.serve_forever()
