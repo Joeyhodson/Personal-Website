@@ -41,6 +41,10 @@ def ledcube():
 def ledfootwells():
     return render_template('LEDFootwells.html')
 
+@app.route('/Website')
+def website():
+    return render_template('website.html')
+
 @app.route('/Photography')
 def photography():
     return render_template('Photography.html')
