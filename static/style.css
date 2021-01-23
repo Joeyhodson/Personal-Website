@@ -12,25 +12,16 @@ body {
 .scrollFooter {
     position: fixed;
     font-size: 14px;
-    text-align: center;
+    /* text-align: center; */
     background:rgb(37, 38, 48);
     color: rgb(173, 226, 87);
     vertical-align: center;
+    height: 5%;
     width: 100%;
     margin:0 auto;
     bottom: 0;
-} 
-
-.indexFooter {
-    /* position:static; */
-    font-size: 14px;
-    text-align: center;
-    background:rgb(37, 38, 48);
-    color: rgb(173, 226, 87);
-    /* vertical-align: center; */
-    width: 100%;
-    margin:0 auto;
-    bottom: 0;
+    padding-top: 1%;
+    padding-bottom: 1%;
 } 
 
 .scrollHeader {
