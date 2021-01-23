@@ -9,20 +9,23 @@
         <link rel="icon" type="image/png" href="/static/logo.png">
     </head>
 
+    <!-- Header -->
+
     <div class="scrollHeader">
         <h1>
             <i class="fas fa-angle-double-right"></i><span class='smallSpace'>&nbsp;&nbsp;&nbsp;</span>Joseph Hodson<span class='smallSpace'>&nbsp;</span><img SRC="/static/cursor.gif">
             <span class='smaller'><span style="float:right;">
-            <a href="mailto:Josephahodson@gmail.com"><i class="fas fa-envelope" style="font-size: 1.45em;"></i></a>
-            <!-- <a href="www.google.com"><i class="fas fa-mobile "style="font-size: 1.4em;"></i></a> -->
-            <a href="https://github.com/Joeyhodson"><i class="fab fa-github "style="font-size: 1.45em;"></i></a>
-            <a href="https://www.linkedin.com/in/joseph-a-hodson/"><i class="fab fa-linkedin "style="font-size: 1.45em;"></i></a>
-            <a href="/resume"><i class="fas fa-file-alt"style="font-size: 1.45em;"></i></a>
+            <a href="mailto:Josephahodson@gmail.com"><i class="fas fa-envelope" style="font-size: 1.4em;"></i></a>
+            <a href="https://github.com/Joeyhodson"><i class="fab fa-github "style="font-size: 1.4em;"></i></a>
+            <a href="https://www.linkedin.com/in/joseph-a-hodson/"><i class="fab fa-linkedin "style="font-size: 1.4em;"></i></a>
+            <a href="/resume"><i class="fas fa-file-alt"style="font-size: 1.4em;"></i></a>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>
         </h1>
     </div>
 
     <body>
+
+        <span class='spaceLines'>
         
         <br><br><br><br>
 
@@ -40,17 +43,25 @@
         <ul>
             <li>The embedded system is centered around a Top Fin air pump, originally powered by two D-batteries. To house the controller, I gutted the lower portion of the pump's container and placed
                 an Arduino Nano, where the batteries would usually be inserted.</li>
+                <br>
             <li>The system's power supply is an old laptop charger that outputs 12VDC, 1.5A after being connected to a buck convertor. The output of the DC-DC convertor feeds directly
                 to the Nano.</li>
+                <br>
             <li>I implemented a homemade filter by using a USB water pump in which runs off 3V-9V DC. I wanted a stronger filter so the water pump's power supply came from a voltage divider from
                 the system's main input voltage, outputting roughly 8.5V.</li>
+                <br>
             <li>The air pump's motor originally ran off 3VDC (two D-batteries) so I therefore connected the 3.3V pin from the Nano to a resistor and then to the pump.</li>
+                <br>
             <li>The Nano's main purpose was to control the lighting in which I programmed using color schemes from Palleteknife.</li>
+                <br>
             <li>I used 20 WS2812B individually-addressable LEDs that I soldered into a rectangular formation (5x4) to easily fit into a square container, fitting nicely on top of the tank.
                 The 3-wire LEDs used both power/ground and a data wire (data pin: 6 in my setup). I soldered the LEDs' power/ground pins in parallel and the data pins I soldered in series as the signal carried
                 from LED to LED. I added a single capacitor before the power/ground terminals to limit any noise to the LEDs.</li>
+                <br>
             <li>I added two switches, one for the system's total power supply, and one for the LEDs.</li>
+                <br>
             <li>To allow for better portability and maintenance, all parts of the system can be detached as I used JST connectors between the utilities.</li>
+                <br>
         </ul>
 
         <!-- Visuals -->
@@ -66,18 +77,23 @@
           </video>  -->
         <br>
 
-        <!-- Footer -->
         <br><br><br><br>
-        <div class ="footer">
-            <span style="float:center;">
-                <a href="/Website"><i class="fas fa-caret-left"></i> Website</a>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="/">Home <i class="fas fa-home"></i></a>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="/LEDFootwells">LED Footwells <i class="fas fa-caret-right"></i></a></span>
-            <br><br><br>
-        </div>
+
+        </span>
 
     </body>
+
+    <!-- Footer -->
+
+    <center>
+        <div class ="scrollFooter">
+            <a href="/Website"><i class="fas fa-caret-left"></i> Website</a>
+            &nbsp;&nbsp;
+            <a href="/">Home <i class="fas fa-home"></i></a>
+            &nbsp;&nbsp;
+            <a href="/LEDFootwells">LED Footwells <i class="fas fa-caret-right"></i></a>
+            <br><br><br><br>
+        </div>
+    </center>
 
 </html>

@@ -66,6 +66,9 @@ if __name__ == '__main__':
     #app.run(host = '0.0.0.0', port=443, threaded=True, ssl_context=('/etc/letsencrypt/live/joeyhodson.com/fullchain.pem', '/etc/letsencrypt/live/joeyhodson.com/privkey.pem'))
     #app.run(host = '0.0.0.0', port=80, threaded=True)
 
+    #Localhost
+    #app.run(host='0.0.0.0', debug=True, port=80, threaded=True)
+
     # Production Server
     logger = logging.getLogger('MainProgram')
     logger.setLevel(10)

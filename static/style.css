@@ -9,8 +9,8 @@ body {
     margin-bottom: 25px;
 }
 
-.footer {
-    position: absolute;
+.scrollFooter {
+    position: fixed;
     font-size: 14px;
     text-align: center;
     background:rgb(37, 38, 48);
@@ -18,8 +18,20 @@ body {
     vertical-align: center;
     width: 100%;
     margin:0 auto;
-    bottom: 5;
-}
+    bottom: 0;
+} 
+
+.indexFooter {
+    /* position:static; */
+    font-size: 14px;
+    text-align: center;
+    background:rgb(37, 38, 48);
+    color: rgb(173, 226, 87);
+    /* vertical-align: center; */
+    width: 100%;
+    margin:0 auto;
+    bottom: 0;
+} 
 
 .scrollHeader {
     position: fixed;
@@ -28,6 +40,10 @@ body {
     top:0;
     background:rgb(37, 38, 48);
     color: rgb(173, 226, 87);
+}
+
+.spaceLines {
+    line-height: 120%;
 }
 
 .smaller {
