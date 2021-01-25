@@ -130,7 +130,7 @@ if __name__ == "__main__":
     in_file.close()
 
 
-    out_file = open("parsed_logs.txt", "a") # change to "a" -> kept "w" since appending would add onto already parsed logs (i.e. duplicates)
+    out_file = open("parsed_logs.txt", "w") # change to "a" -> kept "w" since appending would add onto already parsed logs (i.e. duplicates)
 
     for session in session_dict.values():
         out_file.write(str(session) + "\n\n")
