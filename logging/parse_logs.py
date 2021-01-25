@@ -105,9 +105,9 @@ def parse_request(line):
     return request
 
 
-if __name__ == "__main__":
+def parse_logs(raw_logs):
 
-    in_file = open("logs.txt", "r")
+    in_file = open(raw_logs, "r")
     session_dict = {}
 
     for line in in_file:
@@ -129,18 +129,4 @@ if __name__ == "__main__":
 
     in_file.close()
 
-
-    out_file = open("parsed_logs.txt", "w") # change to "a" -> kept "w" since appending would add onto already parsed logs (i.e. duplicates)
-
-    for session in session_dict.values():
-        out_file.write(str(session) + "\n\n")
-
-    out_file.close()
-
-# IDEA 1:
-# POTENTIAL UPDATES -> ADD TO IP DICTIONARY, COUNT PROPER REQUESTS (SEE IF REAL PERSON ACCESSING SITE, NOT BOT)
-# CONT. -> LOOK AT WHAT URLS THEY WERE ACCESSING (E.G. TRAVERSED THROUGH MY PROJECT URLS, MOST LIKELY REAL PERSON)
-# CREATE GLOBAL LIST OF AUTHENTIC PATHS
-
-# IDEA 2:
-# RATHER THAN CREATING PARSEDLOGS.TXT FROM SCRATCH EVERYTIME, MAYBE TAKE DIFF OF NEW LOG FROM OLD LOG AND APPEND IT TO PARSEDLOGS.TXT
+    return session_dict
