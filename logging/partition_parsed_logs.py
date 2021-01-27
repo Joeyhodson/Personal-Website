@@ -1,5 +1,6 @@
 from parse_logs import parse_logs
 
+
 valid_urls = {'/resume', '/3DPrinting', '/ElectricSkateboard',
 '/Fishing', '/FishTank', '/LEDCube', '/LEDFootwells', '/Website',
 '/Photography', '/RoboticQuadruped', '/JosephHodsonResume.pdf', '/static/style.css',
@@ -8,6 +9,7 @@ valid_urls = {'/resume', '/3DPrinting', '/ElectricSkateboard',
 if __name__== "__main__":
 
     session_dict = parse_logs("logs.txt")
+
     valid_requests = open("valid_requests.txt", "w")
     malicious_requests = open("malicious_requests.txt", "w")
 
