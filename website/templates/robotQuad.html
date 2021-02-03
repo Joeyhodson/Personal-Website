@@ -32,10 +32,11 @@
         <!-- Intro -->
         <h2><b><span class='topicFont'><i class="fas fa-angle-right"></i>&nbsp;Robotic Quadruped</span></b></h2>
         <p>
-           The robotic quadruped, a robotic spider with four legs. I always wanted to create some sort of robot and I had been playing around with servo motors at the time, so when I
-           saw a similar quadruped online, I instantly knew I wanted to make one. I found an online tutorial that brought inspiration, however, I decided to tackle this project with little guidance to gain better 
-           experience. Going about this blindly, I decided to make the robot autonomous and unidirectional for simplicity. I still have a passion for robotics and may consider developing a second spider using
-           a romote controller and stronger servos. My greatest struggle with this project was limiting stress on the servos and trying to decrease the robot's total body weight.
+           A robotic quadruped is a spider-like robot with four legs. I had always wanted to create some robot, and during freshman year, I started to play around with servo motors. So, when I
+           saw a similar quadruped online, inspiration struck and I instantly knew I wanted to make my own. With minimal guidance and some initial struggles with limiting stress on the servos, 
+           I managed to build and program the spider autonomous and unidirectional, for simplicity. The overall experience was highly educational and with my sustained interest in robotics, 
+           I may develop a second spider which uses a remote controller and stronger servos in future. My greatest struggle with this project was limiting stress on the servos and trying to decrease 
+           the robot's total body weight.
         </p>
 
         <!-- Technical Details -->
@@ -47,13 +48,13 @@
             <li>The robot had four 3-part moving limbs and therefore used 12 SG90 servo motors. I used 12 digital gpio pins and had a common power supply plane and ground plane that fed to
                 each motor. I dealt with a lot of jitter in the motors so I included a few capacitors between the power/ground planes in which helped quite a bit.</li>
                 <br>
-            <li>The limbs were made from paint sticks in which I sanded and spray-painted black (I was on a budget). I cut 4 sticks each into 2 separate pieces, 4 femurs and 4 coxas.</li>
+            <li>The limbs were made from paint sticks in which I sanded and spray-painted black. I cut 4 sticks each into 2 separate pieces, 4 femurs and 4 coxas.</li>
                 <br>
             <li>To limit stress on the servos, I switched from 4 alkaline batteries to 4 lithium batteries, weighing roughly 60% of what the original AA batteries did. The AA batteries 
                 were wired in two sets of series connections, the two sets were then wired in parallel, outputting 3V to the servos.</li>
                 <br>
-            <li>The program essentially had a series of for loops within a while loop, each for loop being a servo motor's rotation. Having some new found knowledge in programming, I might implement
-                this a little differently today.</li>
+            <li>The program essentially had a series of for loops within a while loop, each for loop being a servo motor's rotation. Through my newfound knowledge in programming, 
+                I have since found more efficient methods to implement this functionality.</li>
                 <br>
         </ul>
 

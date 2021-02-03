@@ -32,35 +32,38 @@
         <!-- Intro -->
         <h2><b><span class='topicFont'><i class="fas fa-angle-right"></i>&nbsp;Personal Website</span></b></h2>
         <p>
-            The origins of this project stemmed from me wanting to get more involved with Raspberry Pis. I had never completed a project with one up until this project. Once purchasing the pi I did some brainstorming and decided hosting my own website would be
-            challenging, educational, and fun. When I started browsing for project inspiration online I started to realize the powerful things you could do with a pi. It was very overwhelming to decide, but I thought this project would be additionally practical.
-            This project was very educational in the fact that I learned about servers and networks, deeper linux controls, frontend development with HTML & CSS, and backend development with Python. I learned about SSL certs and packet encryption with HTTPS, HTTP requests and status codes,
-            request logging, and some additional Python scripting.
+            The origins of this project stemmed from me wanting to get more involved with Raspberry Pis. When I began browsing online for inspiration, I was enamored 
+            by the many powerful things one could do with a Pi. Through the project, I learned about servers and networks, deeper linux controls, frontend development 
+            with HTML and CSS, as well as backend development with Python. I also learned about SSL certificates and packet encryption with HTTPS, HTTP requests and status 
+            codes, request logging, and some additional Python scripting.
         </p>
 
         <!-- Technical Details -->
         <br>
         <h2><span class='topicFont'><i class="fas fa-angle-right"></i>&nbsp;Technical Details</span></h2>
         <ul>
-            <li>When deciding what web server framework I wanted to use, it needed to be rather simple and lightweight. I soon discovered that is just what Flask is. Since Flask is so lightweight, it isn't meant
-                to be used as a production server, as it can only handle one, or a few requests at a time. I implemented a WSGI Server with Flask as it provides more flexibility. WSGI is just about a standard nowadays when running Python web frameworks.</li>
+            <li>During my search for a suitable web server framework, my key considerations were simplicity and for it to be lightweight. I soon discovered that is just what Flask is. 
+                Since Flask is so lightweight, it isn't meant to be used as a production server, as it can only handle one, or a few requests at a time. I implemented a WSGI Server with 
+                Flask as it provides more flexibility. WSGI is a standard nowadays when running Python web frameworks.</li>
                 <br>
-            <li>When developing the frontend, I decided to learn HTML and CSS. I wasn't intending on having an elegant UI and decided to pass up on JavaScript for the time being. After creating the home page, I decided to pursue the rest
-                of the HTML pages in which all followed a similar template. If you haven't caught on, I was going for an older terminal theme with CSS.</li>
+            <li>When developing the frontend, I decided to learn HTML and CSS. I wasn't inclined to design an aesthetic UI and decided to forgo learning JavaScript for the time being. After 
+                creating the home page, I modeled the other HTML pages based on a similar template, following an older terminal theme through CSS.</li>
                 <br>
-            <li>After creating a few pages, routing the paths to render the HTML pages, and deploying the server on localhost, I was ready to deploy the site onto the web. Using HTTP, I had to open my router's port forwarding
-                on port 80. Since my router's IP address is dynamic, I had to purchase a dynamic DNS domain in which would point to my constantly changing IP. I installed the dynDNS' dynamic update client on the pi,
-                in which would constantly check to see what my network's IP was.</li>
+            <li>After creating a few pages, routing the paths to render the HTML pages, and deploying the server on localhost, I was ready to deploy the site onto the web. Using HTTP, I had 
+                to open my router's port forwarding on port 80. Since my router's IP address is dynamic, I had to purchase a dynamic DNS domain which would point to my constantly changing 
+                IP. I installed the dynDNS' dynamic update client on the pi, which would constantly check to see what my network's IP was.</li>
                 <br>
-            <li>After purchasing a Google Domain Name, I pointed the domain to the dynamic DNS domain, in which subsequently points to my router's dynamic IP.</li>
+            <li>After purchasing a Google Domain Name, I pointed the domain to the dynamic DNS domain, which subsequently points to my router's dynamic IP.</li>
             <br>
-            <li>I had to handle the problem of not worrying about power outages, the network going down, or whatever environmental factors that could impact my server's status. After some research, I discovered Raspberry Pis will turn 
-                back on after a power outage. However, I had to make it so the server would automatically redeploy after the pi would turn back on. To do this, I simply made the pi deploy the server as a systemd service file and would run as a background process that would also 
+            <li>I had to ensure that my server is protected from power outages, network failures and other unforeseen environmental circumstances. After some 
+                research, I discovered Raspberry Pis will turn back on after a power outage. However, I had to make it so the server would automatically redeploy after the pi would turn back on. 
+                To do this, I simply made the pi deploy the server as a systemd service file and would run as a background process that would also 
                 run on bootup. Not only did I have the pi start on bootup, but I had to have the service's update client start on bootup as well, to periodically check my network's IP.</li>
                 <br>
-            <li>The logging was relatively difficult to implement since I was running the server as a WSGI server in which has it's own logging libraries. After some reading and testing, I was able to log all requests to the site.
-                Once the logging process was complete, I ran a cronjob on my pc to pull the log file over ssh routinely. I created a Python parsing script in which runs as a cronjob also. This script forms all the IP's sessions into objects, containing a list of request objects. From there, the 
-                script outputs a new, neatly formatted log that separates genuine requests from, malicious or bot requests by determining if the resource paths are valid. Collecting and analyzing this data will potentially help prevent any vulnerabilities to my server.</li>
+            <li>The logging was relatively difficult to implement since I was running the server as a WSGI server in which has its own logging libraries. After some reading and testing, I was able 
+                to log all requests to the site. Once the logging process was complete, I ran a cron job on my pc to pull the log file over ssh routinely. I created a Python parsing script which also runs 
+                as a cron job. This script forms all the IP's sessions into objects, containing a list of request objects. From there, the script outputs a new, neatly formatted log that separates genuine 
+                requests from malicious or bot requests by determining if the resource paths are valid. Collecting and analyzing this data will potentially help prevent any vulnerabilities to my server.</li>
                 <br>
         </ul>
 

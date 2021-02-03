@@ -32,9 +32,9 @@
         <!-- Intro -->
         <h2><b><span class='topicFont'><i class="fas fa-angle-right"></i>&nbsp;Self-Sufficient Fish Tank</span></b></h2>
         <p>
-           The inspiration to undertake this project originated because I wanted to get another fish, as I used to have many. My only thing about getting a fish tank was 
-           that they required a little bit of setting up and required multiple utilities (air pumps, filters, lights, etc.). These utilities usually require their own power supplies
-           and therefore more messy cords. My goal was to integrate all of these utilities into one functioning system and rely on a single power supply.
+            I started this project as I wanted to get a new fish. However, a typical fish tank requires some setting up due to the many 
+            utility parts involved such as the air pumps, lights and filters, which usually require their own power supplies and therefore 
+            many messy cords. My goal was to integrate all these utilities into a single functioning system reliant on just one power supply.
         </p>
 
         <!-- Technical Details -->
@@ -47,12 +47,12 @@
             <li>The system's power supply is an old laptop charger that outputs 12VDC, 1.5A after being connected to a buck convertor. The output of the DC-DC convertor feeds directly
                 to the Nano.</li>
                 <br>
-            <li>I implemented a homemade filter by using a USB water pump in which runs off 3V-9V DC. I wanted a stronger filter so the water pump's power supply came from a voltage divider from
+            <li>I implemented a homemade filter by using a USB water pump which runs off 3V-9V DC. I wanted a stronger filter so the water pump's power supply came from a voltage divider from
                 the system's main input voltage, outputting roughly 8.5V.</li>
                 <br>
-            <li>The air pump's motor originally ran off 3VDC (two D-batteries) so I therefore connected the 3.3V pin from the Nano to a resistor and then to the pump.</li>
+            <li>The air pump's motor originally ran off 3VDC (two D-batteries) so I connected the 3.3V pin from the Nano to a resistor and then to the pump.</li>
                 <br>
-            <li>The Nano's main purpose was to control the lighting in which I programmed using color schemes from Palleteknife.</li>
+            <li>The Nano's main purpose was to control the lighting which I programmed using color schemes from Palleteknife.</li>
                 <br>
             <li>I used 20 WS2812B individually-addressable LEDs that I soldered into a rectangular formation (5x4) to easily fit into a square container, fitting nicely on top of the tank.
                 The 3-wire LEDs used both power/ground and a data wire (data pin: 6 in my setup). I soldered the LEDs' power/ground pins in parallel and the data pins I soldered in series as the signal carried
